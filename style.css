@@ -1,0 +1,221 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General styling for the body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  background-color: #FDF7E4;
+}
+
+/* Styling for the main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styling for the main heading */
+h1 {
+  color: #007bff;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Styling for the info cards section */
+.info-cards {
+  display: block;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Styling for individual info cards */
+.info-card {
+  flex: 1;
+  padding: 35px;
+  margin: 5px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+.info-card p {
+ font-size: 25px;  
+ font-weight: 600;
+}
+
+.info{
+  display: block;
+}
+.info p{
+  font-size: 35px;
+  font-weight: 800;
+}
+.card_2 {
+  display: flex;
+}
+
+.success { background-color: #28a745; }
+.danger { background-color: #dc3545; }
+.info { background-color: #007bff; }
+
+/* Styling for the transaction list */
+
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styling for individual transaction items */
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.expense { border-left: 4px solid #dc3545; }
+.income { border-left: 4px solid #28a745; }
+
+
+.left, .right {
+   display: block;
+   width: 50%;
+   margin: 5px;
+   
+}
+form{
+  background-color: #DED0B6;
+}
+
+/* Styling for the add transaction section */
+.add-transaction {
+  background-color: #DED0B6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px 0;
+  align-items: center;
+  text-align: center;
+}
+.add-transaction h3{
+   font-size: 20px;
+   font-style: bold;
+   font-weight: 600;
+}
+form{
+  display: flex;
+}
+
+/* Styling for labels in forms */
+label {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+/* Styling for input and select elements in forms */
+input, select {
+   display: flex;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+select option{
+  padding: 8px;
+}
+
+/* Styling for buttons in forms */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  border-color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; 
+
+}
+button, input, select{
+  margin: 5px;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling specific to the add transaction form */
+.add-transaction-form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.add-transaction-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.add-transaction-form input, .add-transaction-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.add-transaction-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-transaction-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the back link */
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+#delete_btn{
+  background: #fff;
+  padding: 5px;
+
+}
+.delete-button{
+  padding: 8px;
+  margin: 1px;
+  font-size: 13px;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c40e20;
+}
+

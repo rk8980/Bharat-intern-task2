@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!-- Main heading for the page -->
+      <h1 class="text-center mb-4">Money Tracker</h1>
+
+      <!-- Info cards for total income, total expense, and remaining money -->
+      <div class="info-cards">
+        <!-- Info card for remaining money -->
+        <div class="info-card info">
+          <p><%= remainingMoney %></p>
+          <h5>Remaining Money</h5>
+        </div>
+        <div class="card_2">
+          <!-- Info card for total income -->
+          <div class="info-card success">
+            <p><%= totalIncome %></p>
+            <h5>Total Income</h5>
+          </div>
+          <!-- Info card for total expense -->
+          <div class="info-card danger">
+            <p><%= totalExpense %></p>
+            <h5>Total Expense</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form to add a new transaction -->
+      <div class="add-transaction">
+        <h3>Add Transaction</h3>
+        <!-- Form for adding a new transaction with input fields -->
+        <form method="post" action="/add">
+          <div class="left">
+            <label for="amount"></label>
+            <input type="number" id="amount" name="amount" required placeholder="Enter Amount" />
+
+            <!-- Submit button for adding a new transaction -->
+            <button type="submit">Add Transaction</button>
+          </div>
+
+          <div class="right">
+            <label for="description"></label>
+            <input type="text" id="description" name="description" required placeholder="Notes..." />
+
+            <label for="type"></label>
+            <select id="type" name="type" required>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <!-- List to display transactions -->
+      <ul class="transaction-list">
+        <!-- Loop through transactions and display each transaction -->
+        <% transactions.forEach(transaction => { %>
+        <!-- Transaction item with dynamic class based on type -->
+        <li
+          class="transaction-item <%= transaction.type === 'expense' ? 'expense' : 'income' %>"
+        >
+          <span class="description"><%= transaction.description %></span>
+          <span class="amount"><%= transaction.amount %></span>
+
+          <form method="POST" action="/delete/<%= transaction._id %>?_method=DELETE" id="delete_btn">
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+        </li>
+        <% }); %>
+      </ul>
+      
+    </div>
+  </body>
+</html>
